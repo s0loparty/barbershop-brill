@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  base: '/barbershop-brill/',
   plugins: [tailwindcss()],
   build: {
     rollupOptions: {
