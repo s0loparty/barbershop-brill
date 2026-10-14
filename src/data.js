@@ -11,7 +11,7 @@ export const socials = [
   { href: "https://t.me", label: "TG" },
 ];
 
-export const bookingUrl = "contacts.html#route";
+export const bookingUrl = "contacts.html";
 
 export const services = [
   {

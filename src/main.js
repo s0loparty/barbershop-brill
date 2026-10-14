@@ -14,8 +14,7 @@ const createNavigation = (mobile = false) =>
   navigation
     .map(
       (item) => `
-        <a class="nav-link ${item.key === pageKey ? "is-active" : ""}" href="${item.href}" ${
-          mobile ? 'data-nav-link="mobile"' : ""
+        <a class="nav-link ${item.key === pageKey ? "is-active" : ""}" href="${item.href}" ${mobile ? 'data-nav-link="mobile"' : ""
         }>${item.label}</a>
       `
     )
@@ -42,8 +41,8 @@ function mountShell() {
       <div class="page-transition" data-page-transition aria-hidden="true"></div>
       <aside class="site-sidebar" aria-label="Основная навигация">
         <div class="brand-lockup">
-          <a href="index.html" class="wordmark">BRILL</a>
-          <span class="submark">Barbershop</span>
+          <a href="index.html" class="wordmark">Сударь</a>
+          <span class="submark">Барбершоп</span>
         </div>
         <nav class="sidebar-nav">${createNavigation(false)}</nav>
         <div class="sidebar-bottom">
@@ -56,8 +55,8 @@ function mountShell() {
       <div class="fullscreen-menu" data-fullscreen-menu aria-hidden="true">
         <div class="mobile-header">
           <div class="brand-lockup">
-            <a href="index.html" class="wordmark">BRILL</a>
-            <span class="submark">Barbershop</span>
+            <a href="index.html" class="wordmark">Сударь</a>
+            <span class="submark">Барбершоп</span>
           </div>
           <button class="menu-toggle" type="button" data-menu-toggle aria-label="Закрыть меню">
             <span class="menu-toggle-bar"></span>
@@ -73,8 +72,8 @@ function mountShell() {
       <main class="site-main">
         <header class="mobile-header">
           <div class="brand-lockup">
-            <a href="index.html" class="wordmark">BRILL</a>
-            <span class="submark">Barbershop</span>
+            <a href="index.html" class="wordmark">Сударь</a>
+            <span class="submark">Барбершоп</span>
           </div>
           <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Открыть меню">
             <span class="menu-toggle-bar"></span>

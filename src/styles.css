@@ -262,7 +262,6 @@ blockquote,
 .booking-link,
 .cta-button,
 .filter-button,
-.route-button,
 .ghost-button {
   display: inline-flex;
   align-items: center;
@@ -283,7 +282,6 @@ blockquote,
 }
 
 .cta-button,
-.route-button,
 .booking-link:hover,
 .booking-link:focus-visible {
   background: linear-gradient(90deg, #ba9221, var(--accent));
@@ -294,7 +292,6 @@ blockquote,
 .booking-link:active,
 .cta-button:active,
 .filter-button:active,
-.route-button:active,
 .ghost-button:active,
 .menu-toggle:active,
 .lightbox-button:active {
@@ -903,29 +900,6 @@ blockquote,
     radial-gradient(circle at 65% 38%, rgba(212, 175, 55, 0.12), transparent 18%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 30%),
     #0d0d0d;
-}
-
-.map-panel::before,
-.map-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
-
-.map-panel::before {
-  background:
-    linear-gradient(135deg, transparent 48%, rgba(255, 255, 255, 0.08) 49%, transparent 50%),
-    linear-gradient(65deg, transparent 44%, rgba(255, 255, 255, 0.06) 45%, transparent 46%),
-    linear-gradient(90deg, transparent 20%, rgba(255, 255, 255, 0.03) 21%, transparent 22%),
-    linear-gradient(180deg, transparent 28%, rgba(255, 255, 255, 0.035) 29%, transparent 30%);
-  background-size: 12rem 12rem, 10rem 10rem, 6rem 6rem, 7rem 7rem;
-  opacity: 0.55;
-}
-
-.map-panel::after {
-  background:
-    radial-gradient(circle at center, transparent 0 42%, rgba(0, 0, 0, 0.32) 82%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.28));
 }
 
 .map-marker {
