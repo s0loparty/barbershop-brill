@@ -31,7 +31,7 @@ jobs:
       - name: Generate static website
         run: npm run generate
         env:
-          NUXT_APP_BASE_URL: /barbershop/
+          NUXT_APP_BASE_URL: /barbershop-brill/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

@@ -49,7 +49,7 @@ npm test
 
 Workflow `.github/workflows/deploy.yml` выполняет проверку типов и статическую
 генерацию, затем публикует `.output/public` в ветку `gh-pages`. Сохранён адрес
-размещения `/barbershop/`: он задаётся переменной `NUXT_APP_BASE_URL` только при
+размещения `/barbershop-brill/`: он задаётся переменной `NUXT_APP_BASE_URL` только при
 сборке. Для другого репозитория или домена измените эту переменную в workflow.
 В настройках GitHub Pages источником публикации должна быть ветка `gh-pages`.
 
