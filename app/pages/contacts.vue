@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
+<script setup lang="ts">
+definePageMeta({ pageKey: 'contacts' })
+useHead({
+  title: "Сударь Барбершоп | Контакты",
+  meta: [{ name: 'description', content: "Контакты Сударь Барбершоп: адрес, часы работы, телефон, маршрут и запись." }],
+  bodyAttrs: { 'data-page': 'contacts' },
+})
+</script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Сударь Барбершоп | Контакты</title>
-  <meta name="description" content="Контакты Сударь Барбершоп: адрес, часы работы, телефон, маршрут и запись." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Manrope:wght@400;500;700&family=Oswald:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body data-page="contacts">
-  <div class="site-shell" data-shell>
-    <section class="page-frame" data-page-root data-label="Контакты">
+<template>
+<section class="page-frame" data-page-root data-label="Контакты">
       <div class="page-inner">
         <section class="contact-layout">
           <div class="contact-panel">
@@ -25,7 +18,7 @@
 
             <div class="contact-list">
               <div class="contact-row">
-                <span class="contact-icon" data-contact-icon="location"></span>
+                <span class="contact-icon" data-contact-icon="location"><ContactIcon name="location" /></span>
                 <div class="contact-text">
                   <strong>Адрес</strong>
                   <span>Заполярная ул., 37, корп. 2, микрорайон Славянский, Прикубанский внутригородской округ, Краснодар</span>
@@ -33,7 +26,7 @@
               </div>
 
               <div class="contact-row">
-                <span class="contact-icon" data-contact-icon="clock"></span>
+                <span class="contact-icon" data-contact-icon="clock"><ContactIcon name="clock" /></span>
                 <div class="contact-text">
                   <strong>Режим работы</strong>
                   <span>Ежедневно<br />10:00 — 22:00</span>
@@ -41,7 +34,7 @@
               </div>
 
               <div class="contact-row">
-                <span class="contact-icon" data-contact-icon="phone"></span>
+                <span class="contact-icon" data-contact-icon="phone"><ContactIcon name="phone" /></span>
                 <div class="contact-text">
                   <strong>Телефон</strong>
                   <a href="tel:+79892692442">+7 (989) 269-24-42</a>
@@ -49,7 +42,7 @@
               </div>
 
               <div class="contact-row">
-                <span class="contact-icon" data-contact-icon="send"></span>
+                <span class="contact-icon" data-contact-icon="send"><ContactIcon name="send" /></span>
                 <div class="contact-text">
                   <strong>Социальные сети</strong>
                   <a href="https://vk.ru/sudarkrd1" target="_blank" rel="noreferrer">https://vk.ru/sudarkrd1</a>
@@ -58,10 +51,7 @@
             </div>
           </div>
 
-          <div id="barbershop-map" style="border-radius: 16px; overflow: hidden;" class="map-panel"
-            aria-label="Карта расположения барбершопа">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A27cfa1743fa8dca85c45a93aacede9b70530e06092c1b526c1b87f8073b93a68&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
-          </div>
+          <BarbershopMap />
         </section>
 
         <section class="quote-band">
@@ -75,9 +65,4 @@
         </section>
       </div>
     </section>
-  </div>
-  <script type="module" src="/src/main.js"></script>
-
-</body>
-
-</html>
+</template>

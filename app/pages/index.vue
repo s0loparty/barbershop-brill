@@ -1,34 +1,29 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сударь Барбершоп | Главная</title>
-    <meta
-      name="description"
-      content="Премиальный барбершоп с editorial-эстетикой: мужские стрижки, бритьё, борода и атмосфера настоящего мужского клуба."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Manrope:wght@400;500;700&family=Oswald:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ТВОЙ_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
-  </head>
-  <body data-page="home">
-    <div class="site-shell" data-shell>
-      <section class="page-frame" data-page-root data-label="Главная">
+<script setup lang="ts">
+definePageMeta({ pageKey: 'home' })
+useHead({
+  title: "Сударь Барбершоп | Главная",
+  meta: [{ name: 'description', content: "Премиальный барбершоп с editorial-эстетикой: мужские стрижки, бритьё, борода и атмосфера настоящего мужского клуба." }],
+  bodyAttrs: { 'data-page': 'home' },
+})
+</script>
+
+<template>
+<section class="page-frame" data-page-root data-label="Главная">
         <div class="page-inner">
           <section class="hero-grid">
             <div class="hero-image">
               <img
-                src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1600&q=80"
+                src="/images/hero.webp"
                 alt="Барбер делает мужскую стрижку"
               />
             </div>
             <div class="brush-title" aria-hidden="true">Cut<br />Shave<br />Repeat</div>
-            <div class="hero-stamp" aria-hidden="true">Сударь<br />. 2026</div>
+            <div 
+              class="hero-stamp text-center" 
+              aria-hidden="true"
+            >
+              Сударь<br /> {{ new Date().getFullYear() }}
+            </div>
             <div class="hero-copy">
               <div class="micro-meta stagger-item">01 editorial issue</div>
               <h1 class="hero-title stagger-item">Твой стиль.<br />Твои правила.</h1>
@@ -36,7 +31,7 @@
                 Мужские стрижки и бритьё в атмосфере характера
               </p>
               <div class="stagger-item">
-                <a class="cta-button" href="contacts.html">Записаться <span aria-hidden="true">→</span></a>
+                <NuxtLink class="cta-button" to="/contacts">Записаться <span aria-hidden="true">→</span></NuxtLink>
               </div>
             </div>
             <div class="hero-footer" aria-hidden="true">01 03</div>
@@ -52,13 +47,10 @@
             </div>
             <div class="editorial-side-note">
               <span>Краснодар</span>
-              <strong>10:00 — 21:00</strong>
+              <strong>10:00 — 22:00</strong>
               <span>Hair / beard / ritual</span>
             </div>
           </section>
         </div>
       </section>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+</template>
