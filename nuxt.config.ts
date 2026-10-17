@@ -18,5 +18,5 @@ export default defineNuxtConfig({
       ],
     },
   },
-  vite: { plugins: [tailwindcss()] },
+  vite: { base: '/barbershop/', plugins: [tailwindcss()] },
 })
